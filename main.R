@@ -1,9 +1,8 @@
 ## Dependencias pertinentes
-z_list.of.packages <- c("foreign", "dplyr")
-new.packages <- z_list.of.packages[!(z_list.of.packages %in% installed.packages()[,"Package"])]
+z_new.packages <- c("foreign", "dplyr")[!(c("foreign", "dplyr") %in% installed.packages()[,"Package"])]
 
-if (length(new.packages)) {
-  install.packages(new.packages)
+if (length(z_new.packages)) {
+  install.packages(z_new.packages)
 }
 
 require("foreign")
